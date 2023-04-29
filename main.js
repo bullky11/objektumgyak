@@ -1,10 +1,10 @@
 import Szemely from "./Szemely.js";
 
 $(function(){
-    console.log("hellóka nyaloka")
+    const szuloElem=$(".tarolo")
     //példányosítás
-    const szemely1= new Szemely("Béla",1965)
-    const szemely2= new Szemely("Jolán",1975)
+    const szemely1= new Szemely("Béla",1965,szuloElem)
+    const szemely2= new Szemely("Jolán",1975,szuloElem)
 
     console.log(szemely1);
     console.log(szemely2)
@@ -17,6 +17,7 @@ $(function(){
     //futásidőben változtathatóak az osztály példányok
     //console.log(szemely1.#szulNev) kivülről privát adattagot nem érek el
     console.log(szemely1.getSzulnev())
+    console.log(szemely1.kor())
 
 
 })
