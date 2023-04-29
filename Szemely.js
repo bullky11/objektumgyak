@@ -15,7 +15,18 @@ class Szemely {
                         <p>${this.kor()}</p>
                         </div>
     `)
+    //rákaattintok a személyekre irja ki consolera az adott szemelyt
+    //készítek egy adattagot a html elemhez
+    this.SzemelyElem=$(".szemely:last-child")//csak az utolso html DOM elem lesz
+
+    console.log(this.SzemelyElem)
+    //function esetén a this-->az az elem ami kiváltotta az eseményt
+    //nyíl függvény esetén--> az aktuális objektumot jelenti
+    this.SzemelyElem.on("click",()=>{
+        console.log(this.nev)
+    })
     //privát adattagok elérése
+
   }
   getSzulnev() {
     return this.#szulNev;
